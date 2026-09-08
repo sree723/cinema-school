@@ -1,0 +1,642 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tamil School of Cinematic Arts</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="brand">
+        <div class="brand-mark">த</div>
+
+        <div>
+            <div class="brand-title">TAMIL SCHOOL</div>
+            <div class="brand-subtitle">OF CINEMATIC ARTS</div>
+        </div>
+    </div>
+
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#school">The School</a>
+        <a href="#programs">Programs</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#admissions">Admissions</a>
+    </nav>
+
+    <a href="#admissions" class="apply-button">
+        Apply Now
+    </a>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-left">
+
+            <div class="eyebrow">
+                CHENNAI · INDIA · EST. 2026
+            </div>
+
+            <h1>
+                Where<br>
+                Stories<br>
+                Become<br>
+                <em>Legacy.</em>
+            </h1>
+
+            <p class="hero-description">
+                A new generation of cinema begins here.
+                Rooted in Tamil culture, inspired by the world
+                and driven by fearless storytellers.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#programs" class="gold-button">
+                    Explore Programs ↗
+                </a>
+
+                <a href="#school" class="text-button">
+                    Discover the School
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-right">
+
+            <div class="hero-vertical">
+                தமிழ்<br>
+                CINEMA
+            </div>
+
+            <div class="film-frame">
+
+                <div class="frame-corner top-left"></div>
+                <div class="frame-corner top-right"></div>
+                <div class="frame-corner bottom-left"></div>
+                <div class="frame-corner bottom-right"></div>
+
+                <span>THE ART OF STORYTELLING</span>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-label">
+            SCROLL TO EXPLORE
+            <span></span>
+        </div>
+
+    </section>
+
+
+    <!-- SCHOOL -->
+
+    <section class="school-section" id="school">
+
+        <div class="section-label">
+            01 / THE SCHOOL
+        </div>
+
+        <div class="school-grid">
+
+            <div class="school-title">
+
+                <span class="tamil-line">
+                    கலை · கதை · மரபு
+                </span>
+
+                <h2>
+                    Cinema is<br>
+                    <em>memory.</em>
+                </h2>
+
+                <h2>
+                    Cinema is<br>
+                    <em>identity.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="school-copy">
+
+                <p class="large-copy">
+                    Tamil School of Cinematic Arts is an imagined
+                    world-class institution where the traditions
+                    of Tamil storytelling meet the future of
+                    global cinema.
+                </p>
+
+                <p>
+                    From the ancient storytellers of Tamil Nadu
+                    to filmmakers who have carried our stories
+                    across the world, the school celebrates cinema
+                    as both an art and a cultural legacy.
+                </p>
+
+                <a href="#" class="arrow-link">
+                    Discover our story →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="programs" id="programs">
+
+    <div class="section-number">
+        02 / PROGRAMS
+    </div>
+
+    <div class="program-heading">
+
+        <div>
+            <span class="eyebrow">
+                THE CRAFT OF CINEMA
+            </span>
+
+            <h2>
+                Learn the craft.<br>
+                Create the <em>magic.</em>
+            </h2>
+        </div>
+
+        <p>
+            Five disciplines. One cinematic language.
+            Learn the craft from masters whose work
+            changed the way audiences see cinema.
+        </p>
+
+    </div>
+
+
+    <div class="program-grid">
+
+
+        <!-- DIRECTION -->
+
+        <a href="{% url 'department' 'direction' %}"
+           class="program-card">
+
+            <div class="program-number">
+                01
+            </div>
+
+            <div class="program-card-content">
+
+                <span>
+                    DIRECTOR'S CRAFT
+                </span>
+
+                <h3>
+                    Direction
+                </h3>
+
+                <p>
+                    Vision · Story · Leadership
+                </p>
+
+            </div>
+
+            <div class="program-arrow">
+                ↗
+            </div>
+
+        </a>
+
+
+        <!-- CINEMATOGRAPHY -->
+
+        <a href="{% url 'department' 'cinematography' %}"
+           class="program-card">
+
+            <div class="program-number">
+                02
+            </div>
+
+            <div class="program-card-content">
+
+                <span>
+                    VISUAL LANGUAGE
+                </span>
+
+                <h3>
+                    Cinematography
+                </h3>
+
+                <p>
+                    Light · Camera · Composition
+                </p>
+
+            </div>
+
+            <div class="program-arrow">
+                ↗
+            </div>
+
+        </a>
+
+
+        <!-- SCREENWRITING -->
+
+        <a href="{% url 'department' 'screenwriting' %}"
+           class="program-card">
+
+            <div class="program-number">
+                03
+            </div>
+
+            <div class="program-card-content">
+
+                <span>
+                    STORY
+                </span>
+
+                <h3>
+                    Screenwriting
+                </h3>
+
+                <p>
+                    Characters · Dialogue · Structure
+                </p>
+
+            </div>
+
+            <div class="program-arrow">
+                ↗
+            </div>
+
+        </a>
+
+
+        <!-- ACTING -->
+
+        <a href="{% url 'department' 'acting' %}"
+           class="program-card">
+
+            <div class="program-number">
+                04
+            </div>
+
+            <div class="program-card-content">
+
+                <span>
+                    PERFORMANCE
+                </span>
+
+                <h3>
+                    Acting
+                </h3>
+
+                <p>
+                    Character · Emotion · Presence
+                </p>
+
+            </div>
+
+            <div class="program-arrow">
+                ↗
+            </div>
+
+        </a>
+
+
+        <!-- EDITING -->
+
+        <a href="{% url 'department' 'editing' %}"
+           class="program-card">
+
+            <div class="program-number">
+                05
+            </div>
+
+            <div class="program-card-content">
+
+                <span>
+                    THE CUT
+                </span>
+
+                <h3>
+                    Editing
+                </h3>
+
+                <p>
+                    Rhythm · Structure · Storytelling
+                </p>
+
+            </div>
+
+            <div class="program-arrow">
+                ↗
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+   
+
+    <!-- FACULTY -->
+
+    <section class="faculty-section" id="faculty">
+
+        <div class="section-label">
+            03 / FACULTY
+        </div>
+
+        <div class="faculty-intro">
+
+            <div>
+
+                <span class="small-title">
+                    THE MASTERS
+                </span>
+
+                <h2>
+                    Learn from<br>
+                    <em>great minds.</em>
+                </h2>
+
+            </div>
+
+            <p>
+                A fictional faculty assembled from legendary
+                voices in cinema and storytelling.
+            </p>
+
+        </div>
+
+
+        <div class="faculty-grid">
+
+
+            <!-- KAMAL -->
+
+            <article class="faculty-card">
+
+                <div class="faculty-image">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kamal_Haasan.jpg"
+                        alt="Kamal Haasan">
+
+                    <span class="faculty-number">01</span>
+
+                </div>
+
+                <div class="faculty-info">
+
+                    <span>VICE PRINCIPAL</span>
+
+                    <h3>Kamal Haasan</h3>
+
+                    <p>
+                        Acting · Direction · Screenwriting
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- BALU -->
+
+            <article class="faculty-card">
+
+                <div class="faculty-image">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Balu_Mahendra.JPG"
+                        alt="Balu Mahendra">
+
+                    <span class="faculty-number">02</span>
+
+                </div>
+
+                <div class="faculty-info">
+
+                    <span>VICE CHANCELLOR</span>
+
+                    <h3>Balu Mahendra</h3>
+
+                    <p>
+                        Cinematography · Direction
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- KUBRICK -->
+
+            <article class="faculty-card">
+
+                <div class="faculty-image">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Stanley_Kubrick_(1949_portrait_by_Phillip_Harrington_-_cropped).jpg"
+                        alt="Stanley Kubrick">
+
+                    <span class="faculty-number">03</span>
+
+                </div>
+
+                <div class="faculty-info">
+
+                    <span>ASSISTANT PROFESSOR</span>
+
+                    <h3>Stanley Kubrick</h3>
+
+                    <p>
+                        Screenplay · Visual Storytelling
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- HITCHCOCK -->
+
+            <article class="faculty-card">
+
+                <div class="faculty-image">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Alfred_Hitchcock_NYWTSm.jpg"
+                        alt="Alfred Hitchcock">
+
+                    <span class="faculty-number">04</span>
+
+                </div>
+
+                <div class="faculty-info">
+
+                    <span>PROFESSOR</span>
+
+                    <h3>Alfred Hitchcock</h3>
+
+                    <p>
+                        Suspense · Camera · Visual Direction
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- SPIELBERG -->
+
+            <article class="faculty-card">
+
+                <div class="faculty-image">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Steven_Spielberg_portrait.jpg"
+                        alt="Steven Spielberg">
+
+                    <span class="faculty-number">05</span>
+
+                </div>
+
+                <div class="faculty-info">
+
+                    <span>VISITING PROFESSOR</span>
+
+                    <h3>Steven Spielberg</h3>
+
+                    <p>
+                        Direction · Production · Storytelling
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- AL PACINO -->
+
+            <article class="faculty-card">
+
+                <div class="faculty-image">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Al_Pacino.jpg"
+                        alt="Al Pacino">
+
+                    <span class="faculty-number">06</span>
+
+                </div>
+
+                <div class="faculty-info">
+
+                    <span>ACTING PROFESSOR</span>
+
+                    <h3>Al Pacino</h3>
+
+                    <p>
+                        Acting · Character · Performance
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADMISSIONS -->
+
+    <section class="admission-section" id="admissions">
+
+        <div class="section-label">
+            04 / ADMISSIONS
+        </div>
+
+        <div class="admission-content">
+
+            <span class="small-title">
+                YOUR NEXT CHAPTER
+            </span>
+
+            <h2>
+                Your story<br>
+                <em>starts here.</em>
+            </h2>
+
+            <p>
+                Bring your imagination.
+                We'll help you turn it into cinema.
+            </p>
+
+            <a href="#" class="gold-button">
+                Begin Your Journey ↗
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-brand">
+
+        <div class="brand-mark">த</div>
+
+        <div>
+            <strong>TAMIL SCHOOL</strong>
+            <span>OF CINEMATIC ARTS</span>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Tamil School of Cinematic Arts
+        </span>
+
+        <span>
+            CHENNAI · INDIA
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

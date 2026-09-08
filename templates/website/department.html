@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ department.title }} — Tamil School of Cinematic Arts</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+
+            background: #061012;
+
+            color: #f3eee5;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .department-header {
+
+            height: 126px;
+
+            padding: 0 6%;
+
+            border-bottom: 1px solid #263333;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .back-link,
+        .home-link {
+
+            color: #f3eee5;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .back-link:hover,
+        .home-link:hover {
+
+            color: #c7a45b;
+        }
+
+
+        .header-center {
+
+            text-align: center;
+        }
+
+
+        .header-title {
+
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 24px;
+
+            letter-spacing: 4px;
+        }
+
+
+        .header-subtitle {
+
+            margin-top: 6px;
+
+            color: #c7a45b;
+
+            font-size: 9px;
+
+            letter-spacing: 4px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .department-hero {
+
+            min-height: 650px;
+
+            padding: 110px 8% 100px;
+
+            border-bottom: 1px solid #263333;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .department-number {
+
+            margin: 0 0 45px;
+
+            color: #c7a45b;
+
+            font-size: 13px;
+
+            letter-spacing: 4px;
+        }
+
+
+        .department-label {
+
+            margin-bottom: 22px;
+
+            color: #7f9293;
+
+            font-size: 12px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .department-hero h1 {
+
+            margin: 0;
+
+            max-width: 1100px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(70px, 11vw, 180px);
+
+            font-weight: normal;
+
+            line-height: 0.85;
+
+            letter-spacing: -7px;
+        }
+
+
+        .department-subtitle {
+
+            margin-top: 65px;
+
+            color: #c7a45b;
+
+            font-size: 15px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .department-description {
+
+            max-width: 760px;
+
+            margin-top: 25px;
+
+            color: #aebbbb;
+
+            font-size: 20px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-section {
+
+            padding: 110px 8%;
+
+            border-bottom: 1px solid #263333;
+        }
+
+
+        .section-label {
+
+            margin-bottom: 20px;
+
+            color: #c7a45b;
+
+            font-size: 11px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+        }
+
+
+        .skills-section h2,
+        .faculty-section h2 {
+
+            margin: 0 0 60px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(45px, 6vw, 85px);
+
+            font-weight: normal;
+
+            letter-spacing: -3px;
+        }
+
+
+        .skills-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            border-top: 1px solid #263333;
+
+            border-left: 1px solid #263333;
+        }
+
+
+        .skill-item {
+
+            min-height: 180px;
+
+            padding: 30px;
+
+            border-right: 1px solid #263333;
+
+            border-bottom: 1px solid #263333;
+
+            transition: background 0.3s ease;
+        }
+
+
+        .skill-item:hover {
+
+            background: #0c191b;
+        }
+
+
+        .skill-item span {
+
+            display: block;
+
+            margin-bottom: 45px;
+
+            color: #c7a45b;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+
+        .skill-item p {
+
+            margin: 0;
+
+            color: #d5d9d5;
+
+            font-size: 18px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           FACULTY
+        ========================= */
+
+        .faculty-section {
+
+            padding: 110px 8%;
+
+            border-bottom: 1px solid #263333;
+        }
+
+
+        .faculty-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            border-top: 1px solid #263333;
+
+            border-left: 1px solid #263333;
+        }
+
+
+        .faculty-card {
+
+            min-height: 420px;
+
+            padding: 45px;
+
+            border-right: 1px solid #263333;
+
+            border-bottom: 1px solid #263333;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: background 0.3s ease;
+        }
+
+
+        .faculty-card:hover {
+
+            background: #0c191b;
+        }
+
+
+        .faculty-role {
+
+            margin: 0 0 35px;
+
+            color: #c7a45b;
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+        }
+
+
+        .faculty-card h3 {
+
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 48px;
+
+            font-weight: normal;
+
+            line-height: 1;
+        }
+
+
+        .faculty-speciality {
+
+            margin-top: 25px;
+
+            color: #aebbbb;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+        }
+
+
+        .faculty-bio {
+
+            max-width: 600px;
+
+            margin-top: auto;
+
+            padding-top: 50px;
+
+            color: #7f9293;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .department-footer {
+
+            padding: 70px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: #040b0d;
+        }
+
+
+        .department-footer h3 {
+
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 28px;
+
+            font-weight: normal;
+        }
+
+
+        .department-footer p {
+
+            margin: 0;
+
+            color: #718283;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .skills-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .faculty-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .department-hero h1 {
+
+                font-size: 90px;
+
+                letter-spacing: -4px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .department-header {
+
+                height: 90px;
+
+                padding: 0 5%;
+            }
+
+
+            .header-center {
+
+                display: none;
+            }
+
+
+            .department-hero {
+
+                padding: 80px 7% 90px;
+            }
+
+
+            .department-hero h1 {
+
+                font-size: 65px;
+
+                letter-spacing: -3px;
+            }
+
+
+            .department-description {
+
+                font-size: 17px;
+            }
+
+
+            .skills-section,
+            .faculty-section {
+
+                padding: 80px 7%;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .faculty-card {
+
+                min-height: 350px;
+
+                padding: 30px;
+            }
+
+
+            .faculty-card h3 {
+
+                font-size: 38px;
+            }
+
+
+            .department-footer {
+
+                padding: 50px 7%;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="department-header">
+
+        <a href="{% url 'home' %}" class="back-link">
+            ← Back to School
+        </a>
+
+
+        <div class="header-center">
+
+            <p class="header-title">
+                TAMIL SCHOOL
+            </p>
+
+            <div class="header-subtitle">
+                OF CINEMATIC ARTS
+            </div>
+
+        </div>
+
+
+        <a href="{% url 'home' %}" class="home-link">
+            Home
+        </a>
+
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="department-hero">
+
+            <p class="department-number">
+                {{ department.number }}
+            </p>
+
+
+            <p class="department-label">
+                THE CRAFT
+            </p>
+
+
+            <h1>
+                {{ department.title }}
+            </h1>
+
+
+            <p class="department-subtitle">
+                {{ department.subtitle }}
+            </p>
+
+
+            <p class="department-description">
+                {{ department.description }}
+            </p>
+
+        </section>
+
+
+
+        <!-- WHAT YOU LEARN -->
+
+        <section class="skills-section">
+
+            <p class="section-label">
+                THE CURRICULUM
+            </p>
+
+
+            <h2>
+                What You Will Learn
+            </h2>
+
+
+            <div class="skills-grid">
+
+                {% for skill in department.skills %}
+
+                    <div class="skill-item">
+
+                        <span>
+                            {{ forloop.counter|stringformat:"02d" }}
+                        </span>
+
+                        <p>
+                            {{ skill }}
+                        </p>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FACULTY -->
+
+        <section class="faculty-section">
+
+            <p class="section-label">
+                MASTERCLASS FACULTY
+            </p>
+
+
+            <h2>
+                Learn From The Masters
+            </h2>
+
+
+            <div class="faculty-grid">
+
+                {% for person in department.faculty %}
+
+                    <article class="faculty-card">
+
+                        <p class="faculty-role">
+                            {{ person.role }}
+                        </p>
+
+
+                        <h3>
+                            {{ person.name }}
+                        </h3>
+
+
+                        <p class="faculty-speciality">
+                            {{ person.speciality }}
+                        </p>
+
+
+                        <p class="faculty-bio">
+                            {{ person.bio }}
+                        </p>
+
+                    </article>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="department-footer">
+
+        <h3>
+            Learn the craft. Create the magic.
+        </h3>
+
+        <p>
+            TAMIL SCHOOL OF CINEMATIC ARTS
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
