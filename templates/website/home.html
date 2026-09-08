@@ -33,9 +33,9 @@
         <a href="#admissions">Admissions</a>
     </nav>
 
-    <a href="#admissions" class="apply-button">
-        Apply Now
-    </a>
+    <a href="{% url 'apply' %}" class="apply-button">
+    Apply Now
+</a>
 
 </header>
 
@@ -356,221 +356,224 @@
     </div>
 
 </section>
+<!-- FACULTY -->
 
+<section class="faculty-section" id="faculty">
 
-   
+    <div class="section-label">
+        03 / FACULTY
+    </div>
 
-    <!-- FACULTY -->
+    <div class="faculty-intro">
 
-    <section class="faculty-section" id="faculty">
+        <div>
 
-        <div class="section-label">
-            03 / FACULTY
+            <span class="small-title">
+                THE MASTERS
+            </span>
+
+            <h2>
+                Learn from<br>
+                <em>great minds.</em>
+            </h2>
+
         </div>
 
-        <div class="faculty-intro">
+        <p>
+            A fictional faculty assembled from legendary
+            voices in cinema and storytelling.
+        </p>
 
-            <div>
+    </div>
 
-                <span class="small-title">
-                    THE MASTERS
-                </span>
 
-                <h2>
-                    Learn from<br>
-                    <em>great minds.</em>
-                </h2>
+    <div class="faculty-grid">
+
+
+        <!-- KAMAL -->
+
+        <a href="{% url 'faculty' 'kamal' %}"
+           class="faculty-card faculty-link">
+
+            <div class="faculty-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kamal_Haasan.jpg"
+                    alt="Kamal Haasan">
+
+                <span class="faculty-number">01</span>
 
             </div>
 
-            <p>
-                A fictional faculty assembled from legendary
-                voices in cinema and storytelling.
-            </p>
+            <div class="faculty-info">
 
-        </div>
+                <span>VICE PRINCIPAL</span>
 
+                <h3>Kamal Haasan</h3>
 
-        <div class="faculty-grid">
+                <p>
+                    Acting · Direction · Screenwriting
+                </p>
 
+            </div>
 
-            <!-- KAMAL -->
+        </a>
 
-            <article class="faculty-card">
 
-                <div class="faculty-image">
+        <!-- BALU -->
 
-                    <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kamal_Haasan.jpg"
-                        alt="Kamal Haasan">
+        <a href="{% url 'faculty' 'balu' %}"
+           class="faculty-card faculty-link">
 
-                    <span class="faculty-number">01</span>
+            <div class="faculty-image">
 
-                </div>
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Balu_Mahendra.JPG"
+                    alt="Balu Mahendra">
 
-                <div class="faculty-info">
+                <span class="faculty-number">02</span>
 
-                    <span>VICE PRINCIPAL</span>
+            </div>
 
-                    <h3>Kamal Haasan</h3>
+            <div class="faculty-info">
 
-                    <p>
-                        Acting · Direction · Screenwriting
-                    </p>
+                <span>VICE CHANCELLOR</span>
 
-                </div>
+                <h3>Balu Mahendra</h3>
 
-            </article>
+                <p>
+                    Cinematography · Direction
+                </p>
 
+            </div>
 
-            <!-- BALU -->
+        </a>
 
-            <article class="faculty-card">
 
-                <div class="faculty-image">
+        <!-- KUBRICK -->
 
-                    <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Balu_Mahendra.JPG"
-                        alt="Balu Mahendra">
+        <a href="{% url 'faculty' 'kubrick' %}"
+           class="faculty-card faculty-link">
 
-                    <span class="faculty-number">02</span>
+            <div class="faculty-image">
 
-                </div>
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Stanley_Kubrick_(1949_portrait_by_Phillip_Harrington_-_cropped).jpg"
+                    alt="Stanley Kubrick">
 
-                <div class="faculty-info">
+                <span class="faculty-number">03</span>
 
-                    <span>VICE CHANCELLOR</span>
+            </div>
 
-                    <h3>Balu Mahendra</h3>
+            <div class="faculty-info">
 
-                    <p>
-                        Cinematography · Direction
-                    </p>
+                <span>ASSISTANT PROFESSOR</span>
 
-                </div>
+                <h3>Stanley Kubrick</h3>
 
-            </article>
+                <p>
+                    Screenplay · Visual Storytelling
+                </p>
 
+            </div>
 
-            <!-- KUBRICK -->
+        </a>
 
-            <article class="faculty-card">
 
-                <div class="faculty-image">
+        <!-- HITCHCOCK -->
 
-                    <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Stanley_Kubrick_(1949_portrait_by_Phillip_Harrington_-_cropped).jpg"
-                        alt="Stanley Kubrick">
+        <a href="{% url 'faculty' 'hitchcock' %}"
+           class="faculty-card faculty-link">
 
-                    <span class="faculty-number">03</span>
+            <div class="faculty-image">
 
-                </div>
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Alfred_Hitchcock_NYWTSm.jpg"
+                    alt="Alfred Hitchcock">
 
-                <div class="faculty-info">
+                <span class="faculty-number">04</span>
 
-                    <span>ASSISTANT PROFESSOR</span>
+            </div>
 
-                    <h3>Stanley Kubrick</h3>
+            <div class="faculty-info">
 
-                    <p>
-                        Screenplay · Visual Storytelling
-                    </p>
+                <span>PROFESSOR</span>
 
-                </div>
+                <h3>Alfred Hitchcock</h3>
 
-            </article>
+                <p>
+                    Suspense · Camera · Visual Direction
+                </p>
 
+            </div>
 
-            <!-- HITCHCOCK -->
+        </a>
 
-            <article class="faculty-card">
 
-                <div class="faculty-image">
+        <!-- SPIELBERG -->
 
-                    <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Alfred_Hitchcock_NYWTSm.jpg"
-                        alt="Alfred Hitchcock">
+        <a href="{% url 'faculty' 'spielberg' %}"
+           class="faculty-card faculty-link">
 
-                    <span class="faculty-number">04</span>
+            <div class="faculty-image">
 
-                </div>
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Steven_Spielberg_portrait.jpg"
+                    alt="Steven Spielberg">
 
-                <div class="faculty-info">
+                <span class="faculty-number">05</span>
 
-                    <span>PROFESSOR</span>
+            </div>
 
-                    <h3>Alfred Hitchcock</h3>
+            <div class="faculty-info">
 
-                    <p>
-                        Suspense · Camera · Visual Direction
-                    </p>
+                <span>VISITING PROFESSOR</span>
 
-                </div>
+                <h3>Steven Spielberg</h3>
 
-            </article>
+                <p>
+                    Direction · Production · Storytelling
+                </p>
 
+            </div>
 
-            <!-- SPIELBERG -->
+        </a>
 
-            <article class="faculty-card">
 
-                <div class="faculty-image">
+        <!-- AL PACINO -->
 
-                    <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Steven_Spielberg_portrait.jpg"
-                        alt="Steven Spielberg">
+        <a href="{% url 'faculty' 'pacino' %}"
+           class="faculty-card faculty-link">
 
-                    <span class="faculty-number">05</span>
+            <div class="faculty-image">
 
-                </div>
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Al_Pacino.jpg"
+                    alt="Al Pacino">
 
-                <div class="faculty-info">
+                <span class="faculty-number">06</span>
 
-                    <span>VISITING PROFESSOR</span>
+            </div>
 
-                    <h3>Steven Spielberg</h3>
+            <div class="faculty-info">
 
-                    <p>
-                        Direction · Production · Storytelling
-                    </p>
+                <span>ACTING PROFESSOR</span>
 
-                </div>
+                <h3>Al Pacino</h3>
 
-            </article>
+                <p>
+                    Acting · Character · Performance
+                </p>
 
+            </div>
 
-            <!-- AL PACINO -->
+        </a>
 
-            <article class="faculty-card">
 
-                <div class="faculty-image">
+    </div>
 
-                    <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Al_Pacino.jpg"
-                        alt="Al Pacino">
-
-                    <span class="faculty-number">06</span>
-
-                </div>
-
-                <div class="faculty-info">
-
-                    <span>ACTING PROFESSOR</span>
-
-                    <h3>Al Pacino</h3>
-
-                    <p>
-                        Acting · Character · Performance
-                    </p>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
+</section>
+   
 
     <!-- ADMISSIONS -->
 
@@ -596,9 +599,9 @@
                 We'll help you turn it into cinema.
             </p>
 
-            <a href="#" class="gold-button">
-                Begin Your Journey ↗
-            </a>
+           <a href="{% url 'apply' %}" class="gold-button">
+    Begin Your Journey ↗
+</a>
 
         </div>
 

@@ -1,0 +1,122 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{{ faculty.name }} | Cinema School</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+    <main class="faculty-profile">
+
+        <section class="faculty-profile-hero">
+
+            <div class="faculty-profile-image">
+
+                <img
+                    src="{{ faculty.image }}"
+                    alt="{{ faculty.name }}"
+                >
+
+            </div>
+
+
+            <div class="faculty-profile-content">
+
+                <span class="small-title">
+                    FACULTY / {{ faculty.name }}
+                </span>
+
+                <span class="faculty-role">
+                    {{ faculty.role }}
+                </span>
+
+                <h1>
+                    {{ faculty.name }}
+                </h1>
+
+                <p class="faculty-speciality">
+                    {{ faculty.speciality }}
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="faculty-about">
+
+            <span class="small-title">
+                ABOUT
+            </span>
+
+            <h2>
+                The filmmaker behind the craft.
+            </h2>
+
+            <p>
+                {{ faculty.about }}
+            </p>
+
+        </section>
+
+
+        <section class="faculty-films">
+
+            <span class="small-title">
+                SELECTED FILMS
+            </span>
+
+            <h2>
+                Notable work.
+            </h2>
+
+
+            <div class="film-list">
+
+                {% for film in faculty.films %}
+
+                    <div class="film-item">
+
+                        <span>
+                            {{ forloop.counter|stringformat:"02d" }}
+                        </span>
+
+                        <h3>
+                            {{ film }}
+                        </h3>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+
+        <section class="faculty-back">
+
+            <a href="{% url 'home' %}">
+                ← Back to Faculty
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

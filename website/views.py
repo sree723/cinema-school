@@ -238,3 +238,109 @@ def department(request, department_name):
             "department": department_data
         }
     )
+def apply(request):
+    return render(request, "website/apply.html")
+
+
+def faculty(request, faculty_name):
+
+    faculty_members = {
+
+        "kamal": {
+            "name": "Kamal Haasan",
+            "role": "VICE PRINCIPAL",
+            "speciality": "Acting · Direction · Screenwriting",
+            "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kamal_Haasan.jpg",
+            "about": "Kamal Haasan is one of the most versatile figures in Indian cinema, known for his work as an actor, filmmaker, screenwriter and producer.",
+            "films": [
+                "Nayakan",
+                "Indian",
+                "Thevar Magan",
+                "Dasavathaaram",
+                "Vikram",
+            ],
+        },
+
+        "balu": {
+            "name": "Balu Mahendra",
+            "role": "VICE CHANCELLOR",
+            "speciality": "Cinematography · Direction",
+            "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Balu_Mahendra.JPG",
+            "about": "Balu Mahendra was an acclaimed cinematographer, filmmaker and director known for his distinctive visual style and naturalistic storytelling.",
+            "films": [
+                "Moondram Pirai",
+                "Veedu",
+                "Sandhya Raagam",
+                "Maro Charitra",
+            ],
+        },
+
+        "kubrick": {
+            "name": "Stanley Kubrick",
+            "role": "ASSISTANT PROFESSOR",
+            "speciality": "Screenplay · Visual Storytelling",
+            "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Stanley_Kubrick_(1949_portrait_by_Phillip_Harrington_-_cropped).jpg",
+            "about": "Stanley Kubrick was an influential filmmaker known for meticulous visual composition, ambitious storytelling and distinctive cinematic techniques.",
+            "films": [
+                "2001: A Space Odyssey",
+                "A Clockwork Orange",
+                "The Shining",
+                "Full Metal Jacket",
+            ],
+        },
+
+        "hitchcock": {
+            "name": "Alfred Hitchcock",
+            "role": "PROFESSOR",
+            "speciality": "Suspense · Camera · Visual Direction",
+            "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Alfred_Hitchcock_NYWTSm.jpg",
+            "about": "Alfred Hitchcock was a pioneering filmmaker celebrated for suspense, visual storytelling and innovative cinematic techniques.",
+            "films": [
+                "Psycho",
+                "Vertigo",
+                "Rear Window",
+                "North by Northwest",
+            ],
+        },
+
+        "spielberg": {
+            "name": "Steven Spielberg",
+            "role": "VISITING PROFESSOR",
+            "speciality": "Direction · Production · Storytelling",
+            "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Steven_Spielberg_portrait.jpg",
+            "about": "Steven Spielberg is one of the most influential filmmakers in modern cinema, known for combining accessible storytelling with large-scale filmmaking.",
+            "films": [
+                "Jaws",
+                "E.T. the Extra-Terrestrial",
+                "Jurassic Park",
+                "Saving Private Ryan",
+            ],
+        },
+
+        "pacino": {
+            "name": "Al Pacino",
+            "role": "ACTING PROFESSOR",
+            "speciality": "Acting · Character · Performance",
+            "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Al_Pacino.jpg",
+            "about": "Al Pacino is an acclaimed actor known for powerful performances, distinctive screen presence and memorable character work.",
+            "films": [
+                "The Godfather",
+                "Serpico",
+                "Scarface",
+                "Scent of a Woman",
+            ],
+        },
+    }
+
+    faculty_member = faculty_members.get(faculty_name)
+
+    if not faculty_member:
+        return render(request, "website/home.html")
+
+    return render(
+        request,
+        "website/faculty.html",
+        {
+            "faculty": faculty_member
+        }
+    )
